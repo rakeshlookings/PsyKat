@@ -29,5 +29,5 @@ app.use(cors(corsOpts))
 const accountRouter = require('./routes/accounts')
 app.use('/data', accountRouter)
 
-const PORT = 4201
+const PORT = process.env.PORT || 4201
 app.listen(PORT, () => { console.log(`server listen to ${PORT}`) })
